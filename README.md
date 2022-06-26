@@ -1,0 +1,2 @@
+# whats
+name: Pull request labeler on: [ pull_request_target ]  permissions:   contents: read   pull-requests: write  jobs:   triage:     runs-on: ubuntu-latest     steps:       - uses: actions/labeler@v4         with:           repo-token: ${{ secrets.GITHUB_TOKEN }}
